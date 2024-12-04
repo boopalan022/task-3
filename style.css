@@ -1,40 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
-
-
+*{
+    padding:0;
+    margin:0;
+}
 body {
     background-color: hsl(0, 0%, 95%);
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    min-height: 100vh;
     font-size: 15px;
     font-family: 'Lexend Deca, sans-serif';
     font-weight: 400;
+    display: flex;
+    align-items: center;
 }
 
-.container {
+.con {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 auto;
 }
 
-.wrapper {
+.main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     overflow: hidden;
     border-radius: 10px;
-    margin: 2rem;   
+    margin: 2rem;
     
 }
 
-.box1 {
+.one {
     background: hsl(31, 77%, 52%);
 }
 
-.box2 {
+.two {
     background: hsl(184, 100%, 22%);
 }
 
-.box3 {
+.three {
     background: hsl(179, 100%, 13%);
 }
 
@@ -51,54 +53,39 @@ body {
 
 .box p {
     color: hsla(0, 0%, 100%, 0.75);
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-.box a {
+.box button {
     text-decoration: none;
     background-color: hsl(0, 0%, 95%);
     padding: 13px 27px;
-    border-radius: 25px;
+    border-radius: 26px;
     margin-top: 60px;
     display: inline-block;
-    border: 2px solid hsl(0, 0%, 95%);
-    transition: all .4s ease-in-out;
+    border: 1px solid hsl(0, 0%, 95%);
 }
 
-.box1 a {
+.one button {
     color: hsl(31, 77%, 52%);
 }
 
-.box2 a {
+.two button {
     color: hsl(184, 100%, 22%);
 }
-
-.box3 a {
+ 
+.three button{
     color: hsl(179, 100%, 13%);
 }
 
-.box a:hover {
+.box button:hover {
     color: hsl(0, 0%, 95%);
     background: transparent;
 }
 
-@media only screen and (max-width: 768px) {
-    .wrapper {
+@media screen and (min-width: 375px) and (max-width: 700px){
+    .main {
         grid-template-columns: 1fr;
-        padding-top: 600px;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-    .container{
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    
-}
-
-@media only screen and (max-width: 425px) {
-    .wrapper {
         margin: 2rem .5rem;
     }
 }
